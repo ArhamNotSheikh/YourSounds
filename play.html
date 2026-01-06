@@ -11,22 +11,20 @@
      
   <body>
 
-    <h1>Simple HTML5 Tone.js Demo</h1>
-    <button onclick="playNote()">Click me to play note!</button>
-    <form>
-      Speed:<input type="int" id="Speed"/>
-      <button>Enter Speed</button>
-     
+  <h1>Play Your recorded Audio</h1>
 
+  <div id="control-box">
+    <button onclick="playNote()">Play Notes</button>
 
-    </form>
-</div>
+    <div>
+      Speed:
+      <input type="number" placeholder="Enter speed multiplier" id="val"/>
+      <button id="Speed">Enter Speed</button>
+    </div>
+  </div>
 
-
-
-
-    <script src="play.js"></script>
-  </body>
+  <script src="play.js"></script>
+</body>
 </html>
 
 

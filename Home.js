@@ -126,6 +126,8 @@
         window.location.href='play.html';}
 
       }
+
+      
 const aboutBg = document.getElementById("about-bg");
 const impCntrl = document.getElementById("impcntrl");
 

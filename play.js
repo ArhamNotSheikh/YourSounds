@@ -1,12 +1,49 @@
  
- const data=JSON.parse(localStorage.getItem("data"))
-
-// let speed=document.getElementById("speed");
-      let topaly = [];
+ const data=JSON.parse(localStorage.getItem("data"));
+  let topaly = [];
       toplay = data.notes;
-      const tempo=(data.tempo);
+      let tempo=(data.tempo);
       console.log(toplay);
-      console.log("at temp"+ tempo);
+      
+
+
+
+
+ let value = 1; 
+
+document.getElementById("Speed").addEventListener("click", () => {
+  let raw = document.getElementById("val").value;
+
+  try {
+    
+    if (raw.trim() === "") {
+      value = 1;
+      console.log("No value entered → using default 1x");
+      return;
+    }
+
+    const v = Number(raw);
+
+  
+    if (isNaN(v) || v <= 0) {
+      throw new Error("Speed should be positive buddy");
+    }
+
+    value = v; 
+    console.log("Speed to play at: " + value + "x");
+  }
+
+  catch (err) {
+    console.log("Caught Error:", err.message);
+    return;
+  }
+
+  tempo = data.tempo * (1/value);   
+  console.log("Updated tempo:", tempo);
+});
+
+
+    
   
       
       

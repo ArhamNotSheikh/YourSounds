@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Voice recorder</title>
+    <title>YourSounds-Home</title>
     <link rel="stylesheet" href="Home.css">
 
   </head>
 
-  <body>
+  
   <body>
   <!-- NAVIGATION -->
   <div id="Navigation">
-    <button>Home</button>
-    <button>About</button>
-    <button>My-Sounds</button>
-    <button>Instruments</button>
+    <a href="Home.html"><button>Home</button></a>
+
+    <a href="About.html"><button>About</button></a>
+
+    <a href="mysounds.html"><button>My-Sounds</button></a>
+
+    <a href="Instruments.html"><button>Instruments</button></a>
+
+    <a href="HowToUse.html"><button>How to use</button></a>
 
     <div id="signups">
-      <button>Log in</button>
-      <button>Sign up</button>
+      <a href="Login.html"><button>Log in</button></a>
+     <a href="Signup.html"> <button>Sign up</button></a>
     </div>
   </div>
 
   <!-- ABOUT BACKDROP -->
-  <div id="about-bg">
-    <h1>ABOUT</h1>
-    <p>
-      This project captures the sound of your voice, analyzes its pitch in real time,
-      and translates it into musical notes. These notes are then replayed using
-      a digital instrument of your choice — turning your voice into music.
-    </p>
-  </div>
+   
+ 
+  <!-- This does NOT fade -->
+<h1 id="title-fixed">YourSounds</h1>
+
+<!-- This fades -->
+<div id="about-bg">
+  <p>
+    YourSounds captures the sound of your voice, analyzes its pitch in real time,
+    and translates it into musical notes. These notes are then replayed using
+    a digital instrument of your choice — turning your voice into music.
+  </p>
+</div>
+
 
   <!-- MAIN SCROLL AREA -->
   <div id="container">
@@ -46,10 +57,9 @@
   <script src="https://unpkg.com/ml5@0.6.0/dist/ml5.min.js"></script>
 
   <!-- YOUR LOGIC -->
-  <script src="main.js"></script>
+  <script src="home.js"></script>
 </body>
 
-  <script src="main.js"></script>
-</body>
+
 
 </html> 

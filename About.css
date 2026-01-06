@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+
+  margin: 0;
+  padding-top: 60px;
+  background: #2b124c;
+  color: white;
+  overflow-x: hidden;
+}
+
+#Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: #3a176f;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+#Navigation button {
+  background: #4b1c8a;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Navigation button:hover {
+  background: #2b124c;
+}
+
+#Navigation button:hover::after {
+  content: " →";
+}
+
+#signups {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
