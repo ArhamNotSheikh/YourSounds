@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voice recorder</title>
+    <link rel="stylesheet" href="Home.css">
+
+  </head>
+
+  <body>
+  <body>
+  <!-- NAVIGATION -->
+  <div id="Navigation">
+    <button>Home</button>
+    <button>About</button>
+    <button>My-Sounds</button>
+    <button>Instruments</button>
+
+    <div id="signups">
+      <button>Log in</button>
+      <button>Sign up</button>
+    </div>
+  </div>
+
+  <!-- ABOUT BACKDROP -->
+  <div id="about-bg">
+    <h1>ABOUT</h1>
+    <p>
+      This project captures the sound of your voice, analyzes its pitch in real time,
+      and translates it into musical notes. These notes are then replayed using
+      a digital instrument of your choice — turning your voice into music.
+    </p>
+  </div>
+
+  <!-- MAIN SCROLL AREA -->
+  <div id="container">
+    <div id="impcntrl">
+      <button id="record">Start Recording</button>
+      <button id="play" >Play Recording</button>
+      <button id="playInstru" onclick="tosend()">Play Instrument</button>
+    </div>
+  </div>
+
+  <!-- 🔥 LIBRARIES (DO NOT TOUCH ORDER) -->
+  <script src="https://unpkg.com/p5@1.9.0/lib/p5.min.js"></script>
+  <script src="https://unpkg.com/p5@1.9.0/lib/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.6.0/dist/ml5.min.js"></script>
+
+  <!-- YOUR LOGIC -->
+  <script src="main.js"></script>
+</body>
+
+  <script src="main.js"></script>
+</body>
+
+</html> 

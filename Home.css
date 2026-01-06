@@ -1,0 +1,119 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+
+  margin: 0;
+  padding-top: 60px;
+  background: #2b124c;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+#Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: #3a176f;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+#Navigation button {
+  background: #4b1c8a;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#Navigation button:hover {
+  background: #2b124c;
+}
+
+#Navigation button:hover::after {
+  content: " →";
+}
+
+#signups {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+/* ---------- ABOUT BACKGROUND ---------- */
+#about-bg {
+  position: fixed;
+  inset: 0;
+  padding: 120px 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: transparent;
+  color: rgba(255, 255, 255, 0.15);
+  transition: opacity 0.8s ease;
+  z-index: 1;
+}
+
+#about-bg h1 {
+  font-size: 120px;
+  margin: 0;
+  letter-spacing: 12px;
+}
+
+#about-bg p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+#container {
+  min-height: 200vh; /* allows scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- CONTROL CARD ---------- */
+#impcntrl {
+  background: #6a35c9; /* contrast purple */
+  padding: 30px;
+  border-radius: 24px;
+
+  display: flex;
+  gap: 16px;
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+#impcntrl button {
+  background: #3a176f;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#impcntrl button:hover {
+  background: #2b124c;
+}
