@@ -13,6 +13,9 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
 /* ---------- NAVBAR ---------- */
 #Navigation {
   position: fixed;
@@ -72,10 +75,10 @@ body {
 /* NEW: h1 separate layer, not part of the fading */
 #title-fixed {
   position: fixed;
-  top: 120px;
-  left: 80px;
+  top: 40px;
+  left: 10px;
 
-  font-size: 120px;
+  font-size: 80px;
   letter-spacing: 12px;
   margin: 0;
 
@@ -87,7 +90,7 @@ body {
 #about-bg {
   position: fixed;
   inset: 0;
-  padding: 90px 90px;
+  padding: 90px 20px;
 
   display: flex;
   flex-direction: column;
@@ -99,9 +102,9 @@ body {
 }
 
 #about-bg p {
-  max-width: 700px;
-  font-size: 18px;
-  line-height: 1.7;
+  max-width: 1000px;
+  font-size: 30px;
+  line-height: 2;
   color: rgba(255, 255, 255, 0.35);
 }
 
@@ -122,7 +125,7 @@ body {
   padding: 30px;
   border-radius: 24px;
 
-  opacity: 100%;
+  opacity: 1;
   
    
 
@@ -148,4 +151,114 @@ body {
 
 #impcntrl button:hover {
   background: #2b124c;
+}
+
+
+/* <-----About page-----> */
+
+
+
+#About {
+  max-width: 850px;
+  margin: 120px auto 80px 80px; /* shifted slightly left */
+  padding: 50px 55px;
+  background: #4a1c8f; /* brighter purple card */
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.55),
+    inset 0 0 14px rgba(255, 255, 255, 0.07);
+}
+
+/* Main heading */
+#About h1 {
+  font-size: 52px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: #f5eaff; /* bright warm white */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Section headings */
+#About h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #f5eaff; /* brighter violet highlight */
+  font-size: 26px;
+  border-left: 5px solid #c89dff; /* aesthetic line */
+  padding-left: 12px;
+  letter-spacing: 1px;
+}
+
+/* Paragraph text */
+#About p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #f0e6ffdc; /* brighter soft text */
+  margin-bottom: 20px;
+}
+
+/* List styling */
+#About ul {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  padding-left: 28px;
+}
+
+#About li {
+  margin-bottom: 10px;
+  color: #f0e6ffee; /* brighter items */
+  font-size: 17px;
+}
+
+
+/* ---------- HOW TO USE PAGE ---------- */
+
+#HowToUse {
+  max-width: 850px;
+  margin: 120px auto 80px 80px; /* left-aligned style */
+  padding: 50px 55px;
+  background: #4a1c8f;
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.55),
+    inset 0 0 14px rgba(255, 255, 255, 0.07);
+}
+
+#HowToUse h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  color: #f5eaff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#HowToUse h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #f5eaff;
+  font-size: 26px;
+  border-left: 5px solid #c89dff;
+  padding-left: 12px;
+  letter-spacing: 1px;
+}
+
+#HowToUse p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #f0e6ffdc;
+  margin-bottom: 20px;
+}
+
+#HowToUse ul {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 28px;
+}
+
+#HowToUse li {
+  margin-bottom: 10px;
+  color: #f0e6ffee;
+  font-size: 17px;
 }

@@ -82,3 +82,38 @@ input[type="int"], input[type="number"], input {
 input:focus {
   background: #3a176f;
 }
+
+
+/* navigation */
+#Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: #3a176f;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+#Navigation button {
+  background: #4b1c8a;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+#Navigation button:hover {
+    background: #2b124c;
+}
+
+#signups {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}
