@@ -262,3 +262,106 @@ body {
   color: #f0e6ffee;
   font-size: 17px;
 }
+
+/* <----------Login,signup page-----------> */
+#title-fixed-logins {
+  position: fixed;
+  top: 0px;
+  left: 10px;
+
+  font-size: 80px;
+  letter-spacing: 12px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.25);
+  z-index: 5; /* stays above */
+  pointer-events: none;
+
+  
+}
+
+
+/* ---------- LOGIN / SIGNUP BOX ---------- */
+
+#login-box, #signup-box {
+  width: 350px;
+  background: #4a1c8f;
+  padding: 30px;
+  margin: 120px auto;
+  border-radius: 24px;
+  text-align: center;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#login-box h2, #signup-box h2 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #f5eaff;
+}
+
+#login-box label, #signup-box label {
+  float: left;
+  margin: 8px 0 4px;
+  color: #f0e6ffdc;
+}
+
+#login-box input, #signup-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+#login-box button, #signup-box button {
+  width: 100%;
+  background: #3a176f;
+  color: white;
+  padding: 12px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#login-box button:hover, #signup-box button:hover {
+  background: #2b124c;
+}
+
+#smalltext {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #d7c8ff;
+}
+
+#smalltext a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+
+/* ---------- yoursounds ---------- */
+
+#recordBox {
+  width: 350px;
+  background: #4a1c8f;
+  padding: 25px;
+  margin: 120px auto;
+  border-radius: 20px;
+  text-align: center;
+  color: #f5eaff;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#recordBox a {
+  color: #ffffff;
+  text-decoration: underline;
+}

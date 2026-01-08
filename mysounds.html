@@ -3,6 +3,7 @@
 <head>
     <Title>YourSounds</Title>
     <link rel="stylesheet" href=Home.css >
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
     <body>
       <!-- NAVIGATION -->
@@ -18,13 +19,22 @@
     <a href="HowToUse.html"><button>How to use</button></a>
 
     <div id="signups">
-      <a href="Login.html"><button>Log in</button></a>
-     <a href="Signup.html"> <button>Sign up</button></a>
+       <a href="Login.html"><button id="loginBtnNav">Log in</button></a>
+
+     <a href="Signup.html"> <button id="signupBtnNav">Sign up</button></a>
+
+     <button id="logoutBtnNav" style="display:none;">Log out</button>
     </div>
   </div>
   
   <h1 id="title-fixed">YourSounds</h1>
-        
+      
+  <div id="recordBox"></div>
+
+  <script src="mysounds.js"></script>
+  
+
+
     </body>
 
 </html>

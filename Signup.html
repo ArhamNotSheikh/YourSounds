@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <Title>YourSounds-Signinn</Title>
-    <link rel="stylesheet" href=Home.css >
+    <title>YourSounds-Signup</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-    <body>
-      <!-- NAVIGATION -->
-  <div id="Navigation">
-    <a href="Home.html"><button>Home</button></a>
 
-    <a href="About.html"><button>About</button></a>
+<body>
 
-    <a href="mysounds.html"><button>My-Sounds</button></a>
+<h1 id="title-fixed-logins">YourSounds</h1>
 
-    <a href="Instruments.html"><button>Instruments</button></a>
+<div id="signup-box">
 
-    <a href="HowToUse.html"><button>How to use</button></a>
+    <h2>SIGN UP</h2>
 
-    <div id="signups">
-      <a href="Login.html"><button>Log in</button></a>
-     <a href="Signup.html"> <button>Sign up</button></a>
-    </div>
-  </div>
-  
-  <h1 id="title-fixed">YourSounds</h1>
-        
-    </body>
+    <label>Username:</label>
+    <input type="text" id="username" required>
 
+    <label>Email:</label>
+    <input type="email" id="email" required>
+
+    <label>Password:</label>
+    <input type="password" id="password" required>
+
+    <button id="signupbtn">Sign Up</button>
+
+    <p id="smalltext">
+        Already have an account?
+        <a href="Login.html">Login</a>
+    </p>
+
+</div>
+
+<script src="signup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="nav.js"></script>
+
+</body>
 </html>

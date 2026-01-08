@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <Title>YourSounds-Login</Title>
-    <link rel="stylesheet" href=Home.css >
+    <title>YourSounds-Login</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-    <body>
-      <!-- NAVIGATION -->
-  <div id="Navigation">
-    <a href="Home.html"><button>Home</button></a>
 
-    <a href="About.html"><button>About</button></a>
+<body>
 
-    <a href="mysounds.html"><button>My-Sounds</button></a>
+<h1 id="title-fixed-logins">YourSounds</h1>
 
-    <a href="Instruments.html"><button>Instruments</button></a>
+<div id="login-box">
 
-    <a href="HowToUse.html"><button>How to use</button></a>
+    <h2>LOGIN</h2>
 
-    <div id="signups">
-      <a href="Login.html"><button>Log in</button></a>
-     <a href="Signup.html"> <button>Sign up</button></a>
-    </div>
-  </div>
-  
-  <h1 id="title-fixed">YourSounds</h1>
-        
-    </body>
+    <label>Email:</label>
+    <input type="text" id="email" required>
 
+    <label>Password:</label>
+    <input type="password" id="password" required>
+
+    <button id="loginbtn">Login</button>
+
+    <p id="smalltext">
+        Don't have an account?
+        <a href="Signup.html">Sign Up</a>
+    </p>
+
+</div>
+
+<script src="login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="nav.js"></script>
+
+</body>
 </html>
