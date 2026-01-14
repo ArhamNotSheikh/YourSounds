@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YourSounds - How To Use</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <div id="Navigation">
+    <a href="Home.html"><button>Home</button></a>
+    <a href="About.html"><button>About</button></a>
+    <a href="mysounds.html"><button>My-Sounds</button></a>
+    <a href="Instruments.html"><button>Instruments</button></a>
+    <a href="HowToUse.html"><button>How to use</button></a>
+
+    <div id="signups">
+       <a href="Login.html"><button id="loginBtnNav">Log in</button></a>
+
+     <a href="Signup.html"> <button id="signupBtnNav">Sign up</button></a>
+
+     <button id="logoutBtnNav" style="display:none;">Log out</button>
+    </div>
+  </div>
+
+  <h1 id="title-fixed">YourSounds</h1>
+
+  <div id="HowToUse">
+
+    <h1>How to Use YourSounds</h1>
+
+    <h2>1. Record Your Voice</h2>
+    <p>
+      To begin, speak, hum, or sing into the microphone.  
+      Make sure you are in a quiet room with minimal background noise so your mic doesn't pick up unwanted sounds.  
+      Using an external microphone is recommended for cleaner pitch detection.
+    </p>
+
+    <h2>2. Listen to Your Recorded Audio</h2>
+    <p>
+      Playback your recorded audio to review it.  
+      Again, ensure your environment stays quiet — background sounds can interfere with the accuracy of pitch extraction.
+    </p>
+
+    <h2>3. Select an Instrument</h2>
+    <p>
+      Choose an instrument from the list of available options.  
+      The pitch of your voice will be matched to the selected instrument.  
+      This allows you to hear how your voice sounds when played through different instruments.
+    </p>
+
+    <h2>4. Play Your Voice as an Instrument</h2>
+    <p>
+      Play your transformed melody!  
+      Hear how your voice-driven tune sounds on the chosen instrument.
+    </p>
+
+    <h2>Additional Controls</h2>
+    <ul>
+      <li><strong>Adjust Speed:</strong> Slow down or speed up the playback to match the tempo you prefer.</li>
+      <li><strong>Adjust Pitch:</strong> Shift the pitch of the generated notes to explore new musical variations.</li>
+    </ul>
+    <h3>
+      
+      play your sound:
+    <a href="Home.html"><button id="playBtn">Play</button></a>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="nav.js"></script>
+
+</body>
+</html>

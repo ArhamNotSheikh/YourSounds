@@ -1,0 +1,119 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #2b124c;
+  color: white;
+  padding: 40px;
+  overflow-x: hidden;
+  animation: fadeIn 1.3s ease both;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; translate: 0 20px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ---------- PAGE TITLE ---------- */
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #ffffffc5;
+}
+
+/* ---------- CONTROL BOX (matches impcntrl style) ---------- */
+#control-box {
+  background: #6a35c9;
+  padding: 30px;
+  border-radius: 24px;
+  max-width: 500px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- BUTTONS (same theme as navbar + impcntrl) ---------- */
+button {
+  background: #3a176f;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #2b124c;
+  transform: scale(1.06);
+}
+
+button:hover::after {
+  content: " →";
+}
+
+/* ---------- INPUT FIELD ---------- */
+input[type="int"], input[type="number"], input {
+  padding: 10px 16px;
+  border-radius: 14px;
+  outline: none;
+  border: none;
+  background: #4b1c8a;
+  color: white;
+  width: 200px;
+
+  transition: background 0.2s ease;
+}
+
+input:focus {
+  background: #3a176f;
+}
+
+
+/* navigation */
+#Navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: #3a176f;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+#Navigation button {
+  background: #4b1c8a;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+#Navigation button:hover {
+    background: #2b124c;
+}
+
+#signups {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}

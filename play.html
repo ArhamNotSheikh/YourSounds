@@ -6,27 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- LOAD Tone.js from unpkg -->
     <script src="https://unpkg.com/tone"></script>
+    <script src="https://cdn.jsdelivr.net/gh/danigb/soundfont-player@master/dist/soundfont-player.js"></script>
+
     <link rel="stylesheet" href="play.css">
     </head>
      
   <body>
+    <div id="Navigation">
+    <a href="Home.html"><button>Home</button></a>
 
-    <h1>Simple HTML5 Tone.js Demo</h1>
-    <button onclick="playNote()">Click me to play note!</button>
-    <form>
-      Speed:<input type="int" id="Speed"/>
-      <button>Enter Speed</button>
-     
+    <a href="About.html"><button>About</button></a>
+
+    <a href="mysounds.html"><button>My-Sounds</button></a>
+
+    <a href="Instruments.html"><button>Instruments</button></a>
+
+    <a href="HowToUse.html"><button>How to use</button></a>
+
+    <div id="signups">
+      <a href="Login.html"><button id="loginBtnNav">Log in</button></a>
+
+     <a href="Signup.html"> <button id="signupBtnNav">Sign up</button></a>
+
+     <button id="logoutBtnNav" style="display:none;">Log out</button>
+    </div>
+  </div>
 
 
-    </form>
-</div>
+  <h1>Play Your recorded Audio</h1>
 
+  <div id="control-box">
+    <button onclick="playNote()">Play Notes</button>
 
+    <div>
+      Speed:
+      <input type="number" placeholder="Enter speed multiplier" id="val"/>
+      <button id="Speed">Enter Speed</button>
 
+      <label for="instrument"> Instrument:</label>
+      <select id="instrument">
+      <option value="synth">Synth</option>
+      <option value="piano">Piano</option>
+      <option value="guitar">Guitar</option>
+      <option value="Bass">Bass</option>
+       <option value="Violin">Violin</option>
+        <option value="flute">Flute</option>
+</select>
 
-    <script src="play.js"></script>
-  </body>
+    </div>
+  </div>
+
+  <script src="play.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="nav.js"></script>
+
+</body>
 </html>
 
 
