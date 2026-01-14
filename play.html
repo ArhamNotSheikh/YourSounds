@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- LOAD Tone.js from unpkg -->
     <script src="https://unpkg.com/tone"></script>
+    <script src="https://cdn.jsdelivr.net/gh/danigb/soundfont-player@master/dist/soundfont-player.js"></script>
+
     <link rel="stylesheet" href="play.css">
     </head>
      
@@ -40,6 +42,17 @@
       Speed:
       <input type="number" placeholder="Enter speed multiplier" id="val"/>
       <button id="Speed">Enter Speed</button>
+
+      <label for="instrument"> Instrument:</label>
+      <select id="instrument">
+      <option value="synth">Synth</option>
+      <option value="piano">Piano</option>
+      <option value="guitar">Guitar</option>
+      <option value="Bass">Bass</option>
+       <option value="Violin">Violin</option>
+        <option value="flute">Flute</option>
+</select>
+
     </div>
   </div>
 
