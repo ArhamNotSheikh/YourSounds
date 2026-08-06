@@ -1,0 +1,137 @@
+.useContainer {
+  min-height: calc(100vh - 60px);
+  padding: var(--space-xxl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.titleFixed {
+  position: fixed;
+  top: 15vh;
+  left: 5vw;
+  font-size: clamp(48px, 12vw, 120px);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsla(270, 20%, 90%, 0.025);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+}
+
+.header {
+  font-size: clamp(28px, 5vw, 42px);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-align: left;
+}
+
+.stepsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.stepItem {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stepNumber {
+  background: var(--primary-accent);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-glow);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.stepTitle {
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.stepText {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.subHeader {
+  font-size: 20px;
+  color: var(--text-primary);
+  border-left: 4px solid var(--primary-accent);
+  padding-left: var(--space-sm);
+  margin-top: var(--space-md);
+  text-align: left;
+}
+
+.list {
+  padding-left: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  text-align: left;
+}
+
+.listItem {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+.playNowBtn {
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  transition: all var(--transition-fast);
+  font-family: var(--font-heading);
+}
+
+.playNowBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 64, 129, 0.45);
+}

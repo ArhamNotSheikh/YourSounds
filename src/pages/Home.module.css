@@ -1,0 +1,291 @@
+.homeContainer {
+  min-height: 200vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleFixed {
+  position: fixed;
+  top: 15vh;
+  left: 5vw;
+  font-size: clamp(48px, 12vw, 120px);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsla(270, 20%, 90%, 0.035);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.aboutBg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-xxl);
+  z-index: 1;
+  transition: opacity var(--transition-slow);
+}
+
+.aboutText {
+  max-width: 800px;
+  font-size: clamp(18px, 2.5vw, 28px);
+  line-height: 1.8;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 300;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.scrollIndicator {
+  position: fixed;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  z-index: 1;
+  transition: opacity var(--transition-slow);
+}
+
+.arrowDown {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--text-muted), transparent);
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+.controlWrapper {
+  margin-top: 110vh;
+  margin-bottom: 20vh;
+  z-index: 10;
+  width: 100%;
+  max-width: 650px;
+  padding: 0 var(--space-lg);
+}
+
+.controlCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.impcntrl {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btnRecord {
+  background: var(--primary-accent);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.btnRecord:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--primary-accent);
+}
+
+.btnRecording {
+  background: var(--secondary-accent);
+  color: white;
+  box-shadow: var(--shadow-glow-secondary);
+}
+
+.btnRecording:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--secondary-accent);
+}
+
+.recordButtonWrapper {
+  position: relative;
+}
+
+.recordButtonWrapper.recording::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 36px;
+  border: 1px solid var(--secondary-accent);
+  animation: pulse 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.btnPlay {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+}
+
+.btnPlay:hover:not(:disabled) {
+  background: var(--card-border);
+  transform: translateY(-2px);
+}
+
+.btnInstrument {
+  background: linear-gradient(45deg, var(--primary-accent), var(--secondary-accent));
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.btnInstrument:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 64, 129, 0.4);
+}
+
+/* Sound notes console display */
+.notesConsole {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  width: 100%;
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.consoleTitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-sm);
+  text-align: left;
+}
+
+.notesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+  max-height: 120px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.noteItem {
+  background: var(--card-border);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid hsla(280, 75%, 60%, 0.15);
+  box-shadow: inset 0 0 5px rgba(142, 36, 170, 0.1);
+  animation: notePop 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes notePop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Voice recording wave simulator */
+.recordingWaves {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 40px;
+  margin-top: var(--space-md);
+}
+
+.waveBar {
+  width: 3px;
+  height: 10px;
+  background: var(--secondary-accent);
+  border-radius: 3px;
+  animation: waveGrow 1.2s ease-in-out infinite alternate;
+}
+
+.waveBar:nth-child(1) { animation-delay: 0.1s; height: 12px; }
+.waveBar:nth-child(2) { animation-delay: 0.3s; height: 28px; }
+.waveBar:nth-child(3) { animation-delay: 0.5s; height: 18px; }
+.waveBar:nth-child(4) { animation-delay: 0.2s; height: 32px; }
+.waveBar:nth-child(5) { animation-delay: 0.4s; height: 14px; }
+.waveBar:nth-child(6) { animation-delay: 0.6s; height: 24px; }
+
+@keyframes waveGrow {
+  0% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1.4);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

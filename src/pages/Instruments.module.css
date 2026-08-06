@@ -1,0 +1,125 @@
+.instrumentsContainer {
+  min-height: calc(100vh - 60px);
+  padding: var(--space-xxl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.titleFixed {
+  position: fixed;
+  top: 15vh;
+  left: 5vw;
+  font-size: clamp(48px, 12vw, 120px);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsla(270, 20%, 90%, 0.025);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.mainTitle {
+  font-size: clamp(28px, 5vw, 42px);
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  z-index: 1;
+}
+
+.subTitle {
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text-muted);
+  margin-bottom: var(--space-xxl);
+  z-index: 1;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  max-width: 1200px;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-md);
+  text-align: left;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--card-border);
+  background: var(--bg-color);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.cardTitle {
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.cardText {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: var(--space-md);
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.playBtn {
+  background: var(--primary-accent);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  transition: all var(--transition-fast);
+}
+
+.playBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px var(--primary-accent);
+}

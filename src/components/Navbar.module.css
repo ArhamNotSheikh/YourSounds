@@ -1,0 +1,101 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: var(--nav-bg);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-lg);
+  z-index: 1000;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.navItem {
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 15px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 20px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.navItem:hover {
+  color: var(--text-primary);
+  background: var(--card-border);
+}
+
+.navItem.active {
+  color: var(--text-primary);
+  background: var(--card-border);
+  box-shadow: 0 0 10px var(--primary-accent-glow);
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.welcomeText {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-right: var(--space-sm);
+  font-family: var(--font-heading);
+}
+
+.loginBtn, .signupBtn, .logoutBtn {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.loginBtn {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+}
+
+.loginBtn:hover {
+  background: var(--card-border);
+}
+
+.signupBtn {
+  background: var(--primary-accent);
+  color: white;
+  box-shadow: var(--shadow-glow);
+}
+
+.signupBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px var(--primary-accent);
+}
+
+.logoutBtn {
+  background: transparent;
+  color: var(--secondary-accent);
+  border: 1px solid var(--secondary-accent);
+}
+
+.logoutBtn:hover {
+  background: var(--secondary-accent);
+  color: white;
+  box-shadow: var(--shadow-glow-secondary);
+}
